@@ -1,0 +1,29 @@
+:root {
+
+    --vermelho: #DA121C;
+    --amarelo: #F3D41E;
+    --azul: #06AFE1;
+    --roxo: #583C98;
+}
+
+.logo{
+    width: 100%;
+    height: 300px;
+
+}
+.faixa-logo{
+    width:100%;
+}
+.navbar {
+    background-color: var(--roxo);
+}
+
+.nav-item>a {
+    color: white;
+    text-decoration: none;
+
+}
+
+.nav-h>a:hover {
+    color: var(--amarelo);
+}
