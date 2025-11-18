@@ -44,7 +44,7 @@
                 <fieldset>
                     <legend for="236381080">Data de nascimento:</legend>
                     <div class="form-group">
-                        <input type="date" id="635651465_date" placeholder="02/09/2025" class="form-control">
+                        <input type="text" id="635651465_date" placeholder="00/00/0000" class="form-control">
                     </div>
                 </fieldset>
 
@@ -57,15 +57,8 @@
                     </div>
                 </fieldset>
 
-
-                <!-- Field type: "short" id: "944076852" -->
-                <fieldset>
-                    <legend for="944076852">Telefone do responsável: </legend>
-                    <div class="form-group">
-                        <input id="1071434849" type="text" name="entry.1071434849" class="form-control">
-                    </div>
-                </fieldset>
-
+                
+                
 
                 <!-- Field type: "short" id: "115400962" -->
                 <fieldset>
@@ -74,17 +67,38 @@
                         <input id="1781362853" type="text" name="entry.1781362853" class="form-control">
                     </div>
                 </fieldset>
-
-
+                
+                <!-- Field type: "short" id: "944076852" -->
+                <fieldset>
+                    <legend for="944076852">Telefone do responsável: </legend>
+                    <div class="form-group">
+                        <input id="1071434849" type="tel" name="entry.1071434849" placeholder="(XX) XXXXX-XXXX" class="form-control">
+                    </div>
+                </fieldset>
+                
                 <!-- Field type: "short" id: "2093492255" -->
                 <fieldset>
                     <legend for="2093492255">WhatsApp do responsável:</legend>
                     <div class="form-group">
-                        <input id="1179050656" type="text" name="entry.1179050656" class="form-control">
+                        <input id="1179050656" type="tel" name="entry.1179050656"  placeholder="(XX) XXXXX-XXXX" class="form-control">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend for="1590398022">Nome da mãe:</legend>
+                    <div class="form-group">
+                        <input id="802409093" type="text" name="entry.802409093" class="form-control">
                     </div>
                 </fieldset>
 
 
+                <!-- Field type: "short" id: "861034459" -->
+                <fieldset>
+                    <legend for="861034459">Nome do pai:</legend>
+                    <div class="form-group">
+                        <input id="1954689187" type="text" name="entry.1954689187" class="form-control">
+                    </div>
+                </fieldset>
                 <!-- Field type: "paragraph" id: "1277956519" -->
                 <fieldset>
                     <legend for="1277956519">A criança tem Alergia? Se (SIM) descreva:</legend>
@@ -162,12 +176,14 @@
                 </fieldset>
 
 
-                <!-- Field type: "section" id: "1949897000" -->
+                <!-- Field type: "short" id: "977366760" -->
                 <fieldset>
-                    <legend for="1949897000">Endereço (Rua): </legend>
+                    <legend for="977366760">Rua:</legend>
                     <div class="form-group">
+                        <input id="49152376" type="text" name="entry.49152376" class="form-control">
                     </div>
                 </fieldset>
+
 
                 <!-- Field type: "short" id: "1412003963" -->
                 <fieldset>
@@ -177,6 +193,16 @@
                     </div>
                 </fieldset>
 
+
+                <!-- Field type: "short" id: "461648555" -->
+                <fieldset>
+                    <legend for="461648555">Complemento:</legend>
+                    <div class="form-group">
+                        <input id="1472634027" type="text" name="entry.1472634027" class="form-control">
+                    </div>
+                </fieldset>
+
+
                 <!-- Field type: "short" id: "1896354937" -->
                 <fieldset>
                     <legend for="1896354937">Bairro:</legend>
@@ -184,6 +210,7 @@
                         <input id="553905423" type="text" name="entry.553905423" class="form-control">
                     </div>
                 </fieldset>
+
 
                 <!-- Field type: "short" id: "1508585211" -->
                 <fieldset>
@@ -193,6 +220,7 @@
                     </div>
                 </fieldset>
 
+
                 <!-- Field type: "short" id: "1413045708" -->
                 <fieldset>
                     <legend for="1413045708">Cep:</legend>
@@ -201,13 +229,6 @@
                     </div>
                 </fieldset>
 
-                <!-- Field type: "short" id: "461648555" -->
-                <fieldset>
-                    <legend for="461648555">Complemento:</legend>
-                    <div class="form-group">
-                        <input id="1472634027" type="text" name="entry.1472634027" class="form-control">
-                    </div>
-                </fieldset>
 
                 <!-- Field type: "short" id: "1577015323" -->
                 <fieldset>
@@ -246,42 +267,44 @@
 
     <!--// This script requires jQuery and jquery-form plugin
 // You can use these ones from Cloudflare CDN:-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
-<script>
-    
-    $('#bootstrapForm').submit(function (event) {
-        event.preventDefault()
-        var extraData = {}
-        {
-            /* Parsing input date id=635651465 */
-            var dateField = $("#635651465_date").val()
-            var timeField = $("#635651465_time").val()
-            let d = new Date(dateField)
-            if (!isNaN(d.getTime())) {
-                extraData["entry.635651465_year"] = d.getFullYear()
-                extraData["entry.635651465_month"] = d.getMonth() + 1
-                extraData["entry.635651465_day"] = d.getUTCDate()
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"
+        integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
+    <script>
+
+        $('#bootstrapForm').submit(function (event) {
+            event.preventDefault()
+            var extraData = {}
+            {
+                /* Parsing input date id=635651465 */
+                var dateField = $("#635651465_date").val()
+                var timeField = $("#635651465_time").val()
+                let d = new Date(dateField)
+                if (!isNaN(d.getTime())) {
+                    extraData["entry.635651465_year"] = d.getFullYear()
+                    extraData["entry.635651465_month"] = d.getMonth() + 1
+                    extraData["entry.635651465_day"] = d.getUTCDate()
+                }
+                if (timeField && timeField.split(':').length >= 2) {
+                    let values = timeField.split(':')
+                    extraData["entry.635651465_hour"] = values[0]
+                    extraData["entry.635651465_minute"] = values[1]
+                }
             }
-            if (timeField && timeField.split(':').length >= 2) {
-                let values = timeField.split(':')
-                extraData["entry.635651465_hour"] = values[0]
-                extraData["entry.635651465_minute"] = values[1]
-            }
-        }
-        $('#bootstrapForm').ajaxSubmit({
-            data: extraData,
-            dataType: 'jsonp',  // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
-            error: function () {
-                // Submit of form should be successful but JSONP callback will fail because Google Forms
-                // does not support it, so this is handled as a failure.
-                alert('Preenchido com sucesso!')
-                // You can also redirect the user to a custom thank-you page:
-                window.location = '../index.html'
-            }
+            $('#bootstrapForm').ajaxSubmit({
+                data: extraData,
+                dataType: 'jsonp',  // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
+                error: function () {
+                    // Submit of form should be successful but JSONP callback will fail because Google Forms
+                    // does not support it, so this is handled as a failure.
+                    alert('Preenchido com sucesso!')
+                    // You can also redirect the user to a custom thank-you page:
+                    window.location = '../index.html'
+                }
+            })
         })
-    })
-</script>
+    </script>
 </body>
 
 </html>
